@@ -2,6 +2,7 @@ import argparse
 import subprocess
 import sys
 
+
 """
 This script uses the argparse module to take arguments when the script runs.
 Example usage: python mac_changer-v2.py --interface wlan0 --mac 00:11:22:33:44:55

@@ -1,6 +1,7 @@
 import optparse
 import subprocess
 
+
 """"
 This script uses the option parser module to 
 take the arguments in one line as the script runs,
@@ -21,6 +22,7 @@ def change_mac(interface, new_mac):
         print(f'[-] Failed to bring up {interface}')
     print('[+] MAC address changed successfully')
 
+
 def main():
     # Create a parser object
     parser = optparse.OptionParser()
@@ -37,7 +39,8 @@ def main():
     new_mac = options.new_mac
 
     if interface is None or new_mac is None:
-        print('[-] Please specify an interface and a MAC address\n usage: --interface [INTERFACE] --new_mac [MAC ADDRESS]')
+        print('[-] Please specify an interface and a MAC address\n '
+              'usage: --interface [INTERFACE] --new_mac [MAC ADDRESS]')
         exit(1)
 
     change_mac(interface, new_mac)
